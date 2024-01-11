@@ -1,0 +1,14 @@
+<h1 class="text-center">Llista de Pokémon</h1>
+<div class="d-flex flex-wrap justify-content-center">
+  <button *ngIf="offset > 0" (click)="refresh(offset-25)">
+    «
+  </button>
+
+  <div *ngFor="let poke of pokemonList" class="p-2">
+    <app-card [id]="poke.id" [name]="poke.name" [imageUrl]="poke.imageUrl" [spriteUrl]="poke.spriteUrl"></app-card>
+  </div>
+
+  <button *ngIf="pokemonList.length > 0" (click)="refresh(offset+25)">
+    »
+  </button>
+</div>

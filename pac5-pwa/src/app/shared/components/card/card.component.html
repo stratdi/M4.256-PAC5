@@ -1,0 +1,8 @@
+<mat-card class="card animate__animated animate__fadeIn p-2" [routerLink]="['/pokemon', id]">
+  <mat-card-header class="header">
+    <div mat-card-avatar class="sprite"><img [src]="spriteUrl"></div>
+    <mat-card-title>{{ name }}</mat-card-title>
+    <mat-card-subtitle>No. {{ id }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="image" [src]="imageUrl" [alt]="name">
+</mat-card>

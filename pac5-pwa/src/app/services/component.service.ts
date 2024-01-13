@@ -25,12 +25,13 @@ export class ComponentService {
 
   getPokemonById(id: string): Observable<Pokemon> {
     return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${id}`).pipe(
-      map(response => response.results.map((pokemon: any) => ({
+      map((pokemon: any) => ({
         id: pokemon.id,
         imageUrl: this.imageUrl + pokemon.id + '.png',
         spriteUrl: this.spriteUrl + pokemon.id + '.gif',
-        name: pokemon.name
-      }))));
+        name: pokemon.name,
+      }))
+    );
   }
 
   getPokemonDetailsById(id: string): Observable<Pokemon> {
@@ -43,8 +44,8 @@ export class ComponentService {
           name: response.name,
           description: 'Carregant Pokédex...',
           types: response.types.map((type: any) => type.type.name),
-          height: response.height * 10,
-          width: response.width * 10,
+          height: response.height / 10,
+          weight: response.weight / 10,
           stats: {
             hp: response.stats[0].base_stat,
             attack: response.stats[1].base_stat,

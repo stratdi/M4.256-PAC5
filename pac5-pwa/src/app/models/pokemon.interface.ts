@@ -1,13 +1,13 @@
 import { Stats } from "./stats.interface";
 
 export interface Pokemon {
-  id: string;
+  id: number;
   imageUrl: string;
   spriteUrl: string;
   name: string;
-  description: string;
-  types: string[];
-  height: number;
-  width: number;
-  stats: Stats;
+  description?: string;
+  types?: string[];
+  height?: number;
+  weight?: number;
+  stats?: Stats;
 }

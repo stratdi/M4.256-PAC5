@@ -8,6 +8,11 @@ import { ComponentDetailComponent } from './components/component-detail/componen
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './shared/components/card/card.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { CardComponent } from './shared/components/card/card.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CardComponent
+    CardComponent,
+    MatExpansionModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

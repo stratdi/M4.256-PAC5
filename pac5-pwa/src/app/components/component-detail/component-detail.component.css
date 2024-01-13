@@ -1,0 +1,37 @@
+.content {
+  border: 0px;
+  border-radius: 4px;
+  background-color: #dc0a2d;
+  color: white;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+.text-body-secondary {
+  font-size: 1rem;
+  color: white !important;
+}
+
+img {
+  max-width: 100%;
+  top: 100px;
+}
+
+.botons {
+  width: 100%;
+  border-radius: 4px;
+  background-color: #dc0a2d;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.botons button {
+  background-color: white;
+  color: black;
+}
+
+.nodisplay {
+  visibility: hidden;
+}

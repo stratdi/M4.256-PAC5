@@ -1,5 +1,55 @@
-<div class="container">
-
-  <img [src]="pokemon.imageUrl" class="rounded mx-auto d-block" alt="...">
-
+<div class="container align-middle text-center">
+  <div class="botons d-flex p-2 justify-content-center sticky-top" *ngIf="pokemon">
+    <button mat-fab matTooltip="Torna a la llista" [routerLink]="['/']"><mat-icon aria-hidden="true"
+        fontIcon="list"></mat-icon>
+    </button>
+  </div>
+  <mat-progress-bar *ngIf="basicLoading" mode="indeterminate"></mat-progress-bar>
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img *ngIf="pokemon" [src]="pokemon.imageUrl" class="rounded mx-auto d-block sticky-top" alt="...">
+      </div>
+      <div class="col-md-8 content">
+        <div class="card-body" *ngIf="pokemon">
+          <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
+          <p class="card-text"><small class="text-body-secondary">No. {{pokemon.id}}</small></p>
+          <mat-accordion (click)="loadDetail()">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Veure tots els detalls
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-progress-bar *ngIf="detailLoading" mode="indeterminate"></mat-progress-bar>
+              <div class="d-flex flex-wrap">
+                <div class="p-2 w-100">
+                  <p class="h6">Descripció</p>
+                  <p>{{pokemon.description}}</p>
+                </div>
+                <div class="p-2 flex-fill">
+                  <p class="h6">Tipus</p>
+                  <p><span *ngFor="let type of pokemon.types" class="badge bg-primary me-2">{{type}}</span></p>
+                </div>
+                <div class="p-2 flex-fill">
+                  <p class="h6">Alçada</p>
+                  <p>{{pokemon.height}} m</p>
+                </div>
+                <div class="p-2 flex-fill">
+                  <p class="h6">Pes</p>
+                  <p>{{pokemon.weight}} kg</p>
+                </div>
+                <div class="p-2 w-100">
+                  <p class="h6">Estadístiques</p>
+                  <div>
+                    <canvas id="canvas">{{chart}}</canvas>
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

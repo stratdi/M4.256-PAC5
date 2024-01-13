@@ -13,7 +13,7 @@ export class ComponentListComponent {
   pokemonList: Pokemon[] = [];
   offset: number = 0;
   loading: boolean = true;
-  listView: boolean = true;
+  listView: boolean = false;
 
   ngOnInit(): void {
     this.service

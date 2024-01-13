@@ -15,3 +15,4 @@ export class GridComponent {
   @Input() imageUrl!: string;
   @Input() spriteUrl!: string;
 }
+

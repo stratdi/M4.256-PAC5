@@ -1,7 +1,11 @@
 .card {
   background-color: #d6ebf6;
   cursor: pointer;
-  padding:0px !important;
+  padding: 0px !important;
+}
+
+.card:hover {
+  filter: brightness(115%);
 }
 
 .image {
@@ -15,7 +19,7 @@
   align-items: center;
   text-align: center;
   background-color: white;
-  padding:10px;
+  padding: 10px;
 }
 
 .sprite img {
@@ -24,7 +28,7 @@
 }
 
 .header {
-  padding:10px;
+  padding: 10px;
   background-color: #dc0a2d;
   align-items: center;
 

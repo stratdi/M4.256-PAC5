@@ -13,6 +13,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { GridComponent } from './shared/components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HttpClientModule,
     BrowserAnimationsModule,
     CardComponent,
+    GridComponent,
     MatExpansionModule,
     MatProgressBarModule,
     MatButtonModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

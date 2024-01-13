@@ -1,0 +1,35 @@
+.grid {
+  height: 64px;
+  background-color: #dc0a2d;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.grid:hover {
+  filter: brightness(115%);
+}
+
+.grid img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p .text-body-secondary {
+  color: white !important;
+}

@@ -1,0 +1,7 @@
+<div class="grid d-flex animate__animated animate__fadeIn" [routerLink]="['/pokemon', id]">
+  <div mat-card-avatar class="sprite"><img [src]="spriteUrl"></div>
+  <div class="p-2">
+    <h5 class="">{{name | titlecase}}</h5>
+    <p class=""><small class="text-body-secondary">No. {{id}}</small></p>
+  </div>
+</div>

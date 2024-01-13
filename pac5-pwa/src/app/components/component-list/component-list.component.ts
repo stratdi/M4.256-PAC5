@@ -12,17 +12,20 @@ export class ComponentListComponent {
 
   pokemonList: Pokemon[] = [];
   offset: number = 0;
+  loading: boolean = true;
+  listView: boolean = true;
 
   ngOnInit(): void {
     this.service
       .getPokemon(this.offset)
-      .subscribe((pokes) => this.pokemonList = pokes);
+      .subscribe((pokes) => { this.pokemonList = pokes; this.loading = false });
   }
 
   refresh(offset: number): void {
+    this.loading = true;
     this.offset = offset;
     this.service
       .getPokemon(offset)
-      .subscribe((pokes) => this.pokemonList = pokes);
+      .subscribe((pokes) => { this.pokemonList = pokes; this.loading = false });
   }
 }

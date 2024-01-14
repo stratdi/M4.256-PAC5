@@ -15,3 +15,11 @@ body {
 .mat-mdc-progress-spinner {
   --mdc-circular-progress-active-indicator-color: #dc0a2d !important;
 }
+
+.mdc-linear-progress__bar-inner {
+  border-color: #dc0a2d !important;
+}
+
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: #dc0a2d !important;
+}

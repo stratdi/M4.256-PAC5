@@ -4,11 +4,13 @@
         fontIcon="list"></mat-icon>
     </button>
   </div>
-  <mat-progress-bar *ngIf="basicLoading" mode="indeterminate"></mat-progress-bar>
+  <div class="mt-5" *ngIf="basicLoading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
   <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
-        <img *ngIf="pokemon" [src]="pokemon.imageUrl" class="rounded mx-auto d-block sticky-top" alt="...">
+        <img *ngIf="pokemon" [src]="pokemon.imageUrl" class="rounded mx-auto d-block" alt="...">
       </div>
       <div class="col-md-8 content">
         <div class="card-body" *ngIf="pokemon">

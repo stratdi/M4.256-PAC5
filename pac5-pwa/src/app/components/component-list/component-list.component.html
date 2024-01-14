@@ -3,11 +3,11 @@
 
 <div>
   <div class=" d-flex flex-wrap justify-content-center actions">
-    <button mat-fab matTooltip="Vista graella" class="me-2 mb-2" [class.selected]="!listView"
-      (click)="listView = false"><mat-icon aria-hidden="true" fontIcon="grid_view"></mat-icon>
+    <button mat-fab matTooltip="Vista graella" class="me-2 mb-2" [class.selected]="!listView" (click)="listView = false"
+      aria-label="Vista graella"><mat-icon aria-hidden="true" fontIcon="grid_view"></mat-icon>
     </button>
-    <button mat-fab matTooltip="Vista taula" [class.selected]="listView" (click)="listView = true"><mat-icon
-        aria-hidden="true" fontIcon="list"></mat-icon> </button>
+    <button mat-fab matTooltip="Vista taula" [class.selected]="listView" (click)="listView = true"
+      aria-label="Vista taula"><mat-icon aria-hidden="true" fontIcon="list"></mat-icon> </button>
   </div>
 
   <div class=" d-flex justify-content-center" *ngIf="loading">
